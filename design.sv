@@ -8,16 +8,16 @@ typedef enum bit [1:0] {s0,s1,s2,s3} state;
 state pre_state, next_state;
 
 always_ff@(posedge clk)
-begin
-if(!nrst)
-pre_state <= s0;
-else
-pre_state <= next_state;
-end
+  begin
+    if(!nrst)
+      pre_state <= s0;
+    else
+      pre_state <= next_state;
+  end
 
 always@(pre_state or in)
-begin
-case(pre_state)
+  begin
+    case(pre_state)
 s0: begin
 	 if(in)
 	   begin
@@ -69,6 +69,6 @@ s3: begin
 	     out = 0; 
 	   end
 	end
-endcase
-end
+    endcase
+  end
 endmodule
