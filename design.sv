@@ -19,42 +19,55 @@ always@(pre_state or in)
 begin
 case(pre_state)
 s0: begin
-	 if(in)begin
-	   next_state = s1;
-	   out = 0; end
-	 else begin
-	   next_state = s0;
-	   out = 0;
-	end
+	 if(in)
+	   begin
+	     next_state = s1;
+	     out = 0; 
+	   end
+	 else 
+	   begin
+	     next_state = s0;
+	     out = 0;
+	   end
 	end
 
 s1: begin
-	 if(in) begin 
-	   next_state = s1;
-	   out = 0; end
-	 else begin
-	   next_state = s2;
-	   out = 0; end
+	 if(in) 
+	   begin 
+	     next_state = s1;
+	     out = 0; 
+	   end
+	 else 
+	   begin
+	     next_state = s2;
+	     out = 0; 
+	   end
 	end
 
 s2:	begin
-	 if(in) begin
-	   next_state = s3;
-	   out = 0; end
-	 else begin
-	   next_state = s0;
-	   out = 0; end
+	 if(in) 
+	   begin
+	     next_state = s3;
+	     out = 0; 
+	   end
+	 else 
+	   begin
+	     next_state = s0;
+	     out = 0; 
+	   end
 	end
 	   
 s3: begin
 	 if(in)
-	  begin
-	   next_state = s1;
-	   out = 1;
-	  end 
-	 else begin
-	   next_state = s2;
-	   out = 0; end
+	   begin
+	     next_state = s1;
+	     out = 1;
+	   end 
+	 else 
+	   begin
+	     next_state = s2;
+	     out = 0; 
+	   end
 	end
 endcase
 end
