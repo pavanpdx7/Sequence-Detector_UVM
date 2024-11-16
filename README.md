@@ -3,4 +3,4 @@ As of now developed a simple testbench to verify the functionality of the Design
 
 To Do:
 Need to develop a UVM Testbench to verify the following Design.
-**Need to work on scorebard, scoreboard file is empty
+**Need to work on scorebard, scoreboard file is empty**
